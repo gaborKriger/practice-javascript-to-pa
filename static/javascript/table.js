@@ -4,23 +4,19 @@ function getRandomNumber() {
 }
 
 function changeColor() {
-    let rows = document.querySelectorAll('tbody td');
-    for (let i = 0; i < rows.length; i++) {
-        let row = rows[i];
-        row.addEventListener('mouseenter', function () {
-            if (this.style.backgroundColor !== 'white') {
-                this.style.backgroundColor = 'white';
-                this.style.color = 'black';
-            } else {
+    let names = document.querySelectorAll('#name');
+    let email = document.querySelectorAll('#email');
+    for (let i = 0; i < names.length; i++) {
+        let name = names[i];
+        name.addEventListener('mouseenter', function () {
                 let r = getRandomNumber();
                 let g = getRandomNumber();
                 let b = getRandomNumber();
-                this.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+                email[i].style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
                 let cr = getRandomNumber();
                 let cg = getRandomNumber();
                 let cb = getRandomNumber();
-                this.style.color = 'rgb(' + cr + ',' + cg + ',' + cb + ')';
-            }
+                email[i].style.color = 'rgb(' + cr + ',' + cg + ',' + cb + ')';
         })
     }
 }
