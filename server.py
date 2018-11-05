@@ -27,12 +27,13 @@ def change_row_h1():
     js_file = "changeh1"
     return render_template('index.html', js_file=js_file, content=content)
 
+
 @app.route('/alert')
 def send_alert_with_tr():
     content = content_generator.make_content_for_table(15, 10, 5)
     js_file = 'alertmessage'
-    print(content_generator.birthdate_generator())
     return render_template('index.html', js_file=js_file, content=content)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
