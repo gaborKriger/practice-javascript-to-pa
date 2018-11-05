@@ -8,7 +8,7 @@ function changeColor() {
     let email = document.querySelectorAll('#email');
     for (let i = 0; i < names.length; i++) {
         let name = names[i];
-        name.addEventListener('mouseenter', function () {
+        name.addEventListener('mouseover', function () {
                 let r = getRandomNumber();
                 let g = getRandomNumber();
                 let b = getRandomNumber();

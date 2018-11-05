@@ -12,7 +12,7 @@ def home_page():
 @app.route('/table')
 def change_color():
     content = content_generator.make_content_for_table(10)
-    js_file = "table"
+    js_file = "changebackground"
     return render_template('index.html', js_file=js_file, content=content)
 
 
