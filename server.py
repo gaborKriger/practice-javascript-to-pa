@@ -16,5 +16,12 @@ def change_color():
     return render_template('index.html', js_file=js_file, content=content)
 
 
+@app.route('/changeh1')
+def change_row_h1():
+    content = content_generator.make_content_for_table(10)
+    js_file = "changeh1"
+    return render_template('index.html', js_file=js_file, content=content)
+
+
 if __name__ == '__main__':
     app.run(debug=True)
