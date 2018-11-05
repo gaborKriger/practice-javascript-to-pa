@@ -9,6 +9,11 @@ def home_page():
     return render_template('index.html')
 
 
+@app.route('/calc')
+def calc():
+    return render_template('calc.html')
+
+
 @app.route('/table')
 def change_color():
     content = content_generator.make_content_for_table(10)
