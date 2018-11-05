@@ -7,8 +7,8 @@ app = Flask(__name__)
 @app.route('/')
 def hello_world():
     content = content_generator.make_content_for_table(10)
-    return render_template('index.html', content=content)
-
+    js_file = "table"
+    return render_template('index.html', js_file=js_file, content=content)
 
 
 if __name__ == '__main__':
