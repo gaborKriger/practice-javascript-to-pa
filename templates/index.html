@@ -26,6 +26,7 @@
                     <tr>
                         <th>Name</th>
                         <th>Email</th>
+                        <th>Year of Dirth</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -33,10 +34,12 @@
                         <tr>
                             <td id="name">{{ elem.name }}</td>
                             <td id="email">{{ elem.email }}</td>
+                            <td id="dob">{{ elem.dob }}</td>
                         </tr>
                     {% endfor %}
                     </tbody>
                 </table>
+                <a href="{{ url_for('home_page') }}">BACK HOME</a>
             </div>
         </div>
     </div>
@@ -63,6 +66,10 @@
                     <tr>
                         <td><a href="{{ url_for('change_row_h1') }}">Change to h1</a></td>
                         <td>If the row is clicked, change the row tag to h1.</td>
+                    </tr>
+                    <tr>
+                        <td><a href="{{ url_for('send_alert_with_tr') }}">Alert message</a></td>
+                        <td>If the row is clicked, pop up an alert message.</td>
                     </tr>
                     <tr>
                         <td><a href="{{ url_for('click_color') }}">Click color</a></td>
