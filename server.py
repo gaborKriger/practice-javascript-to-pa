@@ -14,7 +14,7 @@ def calc():
     return render_template('calc.html')
 
 
-@app.route('/table')
+@app.route('/change-color')
 def change_color():
     content = content_generator.make_content_for_table(10)
     js_file = "changebackground"
@@ -25,6 +25,13 @@ def change_color():
 def change_row_h1():
     content = content_generator.make_content_for_table(10)
     js_file = "changeh1"
+    return render_template('index.html', js_file=js_file, content=content)
+
+
+@app.route('/click-color')
+def click_color():
+    content = content_generator.make_content_for_table(10)
+    js_file = "click_color"
     return render_template('index.html', js_file=js_file, content=content)
 
 
