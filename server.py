@@ -37,7 +37,7 @@ def send_alert_with_tr():
 
 @app.route('/click-color')
 def click_color():
-    content = content_generator.make_content_for_table(10)
+    content = content_generator.make_content_for_table(10, 10, 5)
     js_file = "click_color"
     return render_template('index.html', js_file=js_file, content=content)
 

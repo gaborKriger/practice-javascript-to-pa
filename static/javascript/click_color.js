@@ -21,9 +21,9 @@ function clickChangeColor() {
             let fontColor = rows[i].style.color;
 
             if (fontColor.toUpperCase() === 'BLACK') {
-                rows[i].style.color = 'BLUE';
-            } else if (fontColor.toUpperCase() === 'BLUE') {
-                rows[i].style.color = 'ORANGE';
+                rows[i].style.color = 'WHITE';
+            } else if (fontColor.toUpperCase() === 'WHITE') {
+                rows[i].style.color = 'YELLOW';
             } else {
                 rows[i].style.color = 'BLACK';
             }
